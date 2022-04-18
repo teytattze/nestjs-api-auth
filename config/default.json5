@@ -1,0 +1,18 @@
+{
+  server: {
+    host: 'localhost',
+    port: 8000,
+    secure: false,
+  },
+  service: {
+    name: 'auth',
+    alias: 'api-auth',
+  },
+  jwt: {
+    ttl: 60,
+    alg: 'ES512',
+    iss: 'auth.sv-connect.com',
+    publicKeyPath: '/config/jwt-public.pem',
+    privateKeyPath: '/config/jwt-private.pem',
+  },
+}
